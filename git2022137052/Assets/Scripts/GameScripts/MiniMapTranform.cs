@@ -28,15 +28,15 @@ public class MiniMapTranform : MonoBehaviour
 
         if (this.gameObject.transform.position.z <= -20.0f)
         {
-            this.gameObject.transform.position += new Vector3(0.0f, 0.0f, 50.0f);
+            this.gameObject.transform.position += new Vector3(0.0f, 0.0f, 80.0f);
 
-            if (changeCheckTime <= changeTimer)
-            {
-                GameObject temp = (GameObject)Instantiate(MapData);
-                temp.transform.position = this.gameObject.transform.position;
-                Destroy(this.gameObject);
+            //if (changeCheckTime <= changeTimer)
+            //{
+            //    //GameObject temp = (GameObject)Instantiate(MapData);
+            //    transform.position = this.gameObject.transform.position;
+            //    //Destroy(this.gameObject);
 
-            }
+            //}
         }
 
        

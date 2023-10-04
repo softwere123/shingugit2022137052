@@ -4,19 +4,41 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public Vector3 postion;
-    public float Speed = 1.0f;
-    // Start is called before the first frame update
-    void Start()
+    public float moveSpeed = 5f; // 이동 속도
+
+    public int PlayerHP;
+    public int PlayerMax = 100;
+
+    private void Start()
     {
-        
+        PlayerHP = PlayerMax;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        postion.x += Speed * Time.deltaTime * Input.GetAxisRaw("Horizontal");
-        postion.y += Speed * Time.deltaTime * Input.GetAxisRaw("Vertical");
-        transform.position = postion;
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+
+        Vector3 movement = new Vector3(horizontalInput, verticalInput, 0f ).normalized * moveSpeed;
+
+        // Rigidbody를 사용하여 움직임
+        // Rigidbody가 없으면 Transform을 사용할 수도 있습니다.
+        Rigidbody rb = GetComponent<Rigidbody>();
+        rb.velocity = movement;
+    }
+
+    public void PlayerDamaged(int Damage)
+    {
+        PlayerHP -= Damage;
+
+        if( PlayerHP < 0 )
+        {
+            Die();
+        }
+    }
+
+    public void Die()
+    {
+        Debug.Log("Die");
     }
 }
