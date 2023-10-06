@@ -13,10 +13,9 @@ GameObject:
   - component: {fileID: 5113409919246244910}
   - component: {fileID: 3092611711424817992}
   - component: {fileID: 6027039119549323366}
-  - component: {fileID: -6239994449738963352}
-  - component: {fileID: 8726168412478778435}
+  - component: {fileID: -526790289855955104}
   m_Layer: 0
-  m_Name: Breakable
+  m_Name: Unbreakable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2476091d496b1b64583e4feab7a989f5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -112,8 +111,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d45518591da6996489c64e7282645789, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackPoint: 10
---- !u!114 &-6239994449738963352
+  attackPoint: 20
+--- !u!114 &-526790289855955104
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,23 +121,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 2942844103654934509}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a1d31da288953e45913a9200924734b, type: 3}
+  m_Script: {fileID: 11500000, guid: a23924bbded3bf6478ccec913719a532, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackPoint: 10
---- !u!54 &8726168412478778435
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2942844103654934509}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  PlayerHP: 0
+  PlayerMax: 100

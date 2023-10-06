@@ -39,6 +39,6 @@ public class PlayerController : MonoBehaviour
 
     public void Die()
     {
-        Debug.Log("Die");
+       this.gameObject.SetActive( false );
     }
 }
