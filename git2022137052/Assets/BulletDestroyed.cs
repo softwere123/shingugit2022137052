@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class BulletDestroyed : MonoBehaviour
 {
-
-    private void Start()
-    {
-        PlayerHP = PlayerMax;
-    }
+   
 
     public int PlayerHP;
     public int PlayerMax = 100;
@@ -28,7 +24,14 @@ public class BulletDestroyed : MonoBehaviour
        this.gameObject.SetActive(false);
     }
     // Start is called before the first frame update
-  
+    void Start()
+    { 
+        
+    }
+
     // Update is called once per frame
-  
+    void Update()
+    {
+        
+    }
 }
